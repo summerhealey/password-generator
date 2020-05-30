@@ -17,6 +17,25 @@ let passwordLength = parseInt(prompt("Please enter desired password length. Mini
 if (passwordLength < 8 || passwordLength > 128) {
   let passwordLength = alert("Invalid entry. Please choose a password length between 8 and 128 characters.");
 
+//Confirmation for the types of characters to include in the password.
+
+//Confirm use of lowercase characters.
+let lowercaseConfirm = window.confirm("Please press okay if you would like to include lowercase characters in the password.");
+
+//Confirm use of uppercase characters.
+let uppercaseConfirm = window.confirm("Please press okay if you would like to include uppercase characters in the password.");
+
+//Confirm use of numerical characters.
+let numericalConfirm = window.confirm("Please press okay if you would like to include numerical characters in the password.");
+
+//Confirm use of special characters.
+let specialConfirm = window.confirm("Please press okay if you would like to include special characters in the password.");
+
+//Alert added to advise if no characters are confirmed, that the password generation cannot continue.
+if (!lowercaseConfirm && !uppercaseConfirm && !numericalConfirm && !specialConfirm) {
+    alert("Please choose at least one character type to generate password.")
+} 
+
  
  
 
