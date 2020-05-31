@@ -1,5 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var generateSelect = document.querySelector("#password");
 
 // Defined character types. 
 
@@ -113,4 +114,21 @@ function writePassword() {
 //Added event listener to generate button so that when generate button is clicked, generated password is displayed.
 generateBtn.addEventListener("click", writePassword);
  
-
+function copyPassword () {
+ 
+    /* Get the text field */
+    var copyText = document.getElementById("password");
+ 
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+  
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+  
+    /* Alert the copied text */
+    alert("Copied the text: " + copyText.value);
+  }
+ 
+  //Add event listner to selected password text
+  generateSelect.addEventListener("select", copyPassword);
