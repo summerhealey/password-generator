@@ -18,7 +18,7 @@ function generatePassword() {
 //Function includes: prompts and confirms for inputs; loop of inputs to fill an empty array, and result of a joined array that provides a string to display the password as one element.
  
 //Empty array created and characters are added until passwordLength is satisfied. 
-. 
+
   let passwordArray = []
  
 //While function. 
