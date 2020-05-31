@@ -61,64 +61,56 @@ function generatePassword() {
 
 //Loop function generates one of each character selected until the array satisfies the user-defined length. 
  
-for (var i = 0; passwordArray.length < passwordLength; i++) {
+  for (var i = 0; passwordArray.length < passwordLength; i++) {
  
-  if (lowercaseConfirm === true && passwordArray.length <= passwordLength) {
-    let lowercaseInput = lowercaseCharacters.charAt(Math.floor(Math.random() * lowercaseCharacters.length));
-    passwordArray.push(lowercaseInput);
-    console.log(passwordArray.length)
-    } else {
-    lowercaseConfirm = false;
-  }
+    if (lowercaseConfirm === true && passwordArray.length <= passwordLength) {
+      let lowercaseInput = lowercaseCharacters.charAt(Math.floor(Math.random() * lowercaseCharacters.length));
+      passwordArray.push(lowercaseInput);
+        console.log(passwordArray.length)
+      } else {
+      lowercaseConfirm = false;
+    }
 
-  if (uppercaseConfirm === true && passwordArray.length < passwordLength) {
-    let uppercaseInput = uppercaseCharacters.charAt(Math.floor(Math.random() * uppercaseCharacters.length));
-    passwordArray.push(uppercaseInput);
-    console.log(passwordArray)
-    } else {
-    uppercaseConfirm = false;
-  }
+    if (uppercaseConfirm === true && passwordArray.length < passwordLength) {
+      let uppercaseInput = uppercaseCharacters.charAt(Math.floor(Math.random() * uppercaseCharacters.length));
+      passwordArray.push(uppercaseInput);
+      console.log(passwordArray)
+      } else {
+      uppercaseConfirm = false;
+    }
 
-  if (numericalConfirm === true && passwordArray.length < passwordLength) {
-    let numericalInput = numericalCharacters.charAt(Math.floor(Math.random() * numericalCharacters.length));
-    passwordArray.push(numericalInput);
-    console.log(passwordArray)
-    } else {
-    numericalConfirm = false;
-  }
+    if (numericalConfirm === true && passwordArray.length < passwordLength) {
+      let numericalInput = numericalCharacters.charAt(Math.floor(Math.random() * numericalCharacters.length));
+      passwordArray.push(numericalInput);
+      console.log(passwordArray)
+      } else {
+      numericalConfirm = false;
+    }
 
-  if (specialConfirm === true && passwordArray.length < passwordLength) {
-    let specialInput = specialCharacters.charAt(Math.floor(Math.random() * specialCharacters.length));
-    passwordArray.push(specialInput);
-    console.log(passwordArray)
-    } else {
-    specialConfirm = false;
-  }
-}  
+    if (specialConfirm === true && passwordArray.length < passwordLength) {
+      let specialInput = specialCharacters.charAt(Math.floor(Math.random() * specialCharacters.length));
+      passwordArray.push(specialInput);
+      console.log(passwordArray)
+      } else {
+      specialConfirm = false;
+    }
+  }  
 
-
-}
-
-
+  let passwordCharacters = passwordArray.join ("");
+  return passwordCharacters
  
-
-
-
 }
-
-
-
-
-
-
-// Write password to the #password input
+ 
+//writePassword function added to translate output "passwordCharacters" to display in text area defined by #password.
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
+ 
   passwordText.value = password;
-
-}
-
-// Add event listener to generate button
+} 
+ 
+ 
+//Added event listener to generate button so that when generate button is clicked, generated password is displayed.
 generateBtn.addEventListener("click", writePassword);
+ 
+
