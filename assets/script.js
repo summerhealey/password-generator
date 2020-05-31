@@ -19,7 +19,8 @@ function generatePassword() {
 //Prompt for the length of the password.
   let passwordLength = parseInt(prompt("Please enter desired password length. Minimum of 8 characters required. Please do not exceed 128 characters."));
   
-  //console.log(passwordLength);
+  //Test for passwordLength prompt
+  console.log(passwordLength);
 
   //Validation that length of password is set between 8 and 128 characters.  
   if (passwordLength < 8 || passwordLength > 128) {
@@ -44,6 +45,9 @@ function generatePassword() {
       alert("Please choose at least one character type to generate password.")
   } 
 
+
+//Test uses passwordArray to confirm loop function and array conversion to a string operate correctly.
+    console.log(passwordArray)
 
 //Loop function generates one of each character selected until the array satisfies the user-defined length. 
  
