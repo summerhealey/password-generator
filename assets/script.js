@@ -44,13 +44,54 @@ function generatePassword() {
       alert("Please choose at least one character type to generate password.")
   } 
 
+
+//Loop function generates one of each character selected until the array satisfies the user-defined length. 
  
+for (var i = 0; passwordArray.length < passwordLength; i++) {
  
-
-
-
+  if (lowercaseConfirm === true && passwordArray.length <= passwordLength) {
+    let lowercaseInput = lowercaseCharacters.charAt(Math.floor(Math.random() * lowercaseCharacters.length));
+    passwordArray.push(lowercaseInput);
+    console.log(passwordArray.length)
+    } else {
+    lowercaseConfirm = false;
   }
+
+  if (uppercaseConfirm === true && passwordArray.length < passwordLength) {
+    let uppercaseInput = uppercaseCharacters.charAt(Math.floor(Math.random() * uppercaseCharacters.length));
+    passwordArray.push(uppercaseInput);
+    console.log(passwordArray)
+    } else {
+    uppercaseConfirm = false;
+  }
+
+  if (numericalConfirm === true && passwordArray.length < passwordLength) {
+    let numericalInput = numericalCharacters.charAt(Math.floor(Math.random() * numericalCharacters.length));
+    passwordArray.push(numericalInput);
+    console.log(passwordArray)
+    } else {
+    numericalConfirm = false;
+  }
+
+  if (specialConfirm === true && passwordArray.length < passwordLength) {
+    let specialInput = specialCharacters.charAt(Math.floor(Math.random() * specialCharacters.length));
+    passwordArray.push(specialInput);
+    console.log(passwordArray)
+    } else {
+    specialConfirm = false;
+  }
+}  
+
+
 }
+
+
+ 
+
+
+
+}
+
 
 
 
