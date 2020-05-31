@@ -16,15 +16,25 @@ function generatePassword() {
 //Empty array created and characters are added until passwordLength is satisfied. 
   let passwordArray = []
 
-//Prompt for the length of the password.
-  let passwordLength = parseInt(prompt("Please enter desired password length. Minimum of 8 characters required. Please do not exceed 128 characters."));
-  
-  //Test for passwordLength prompt
-  console.log(passwordLength);
+//While function. 
 
-  //Validation that length of password is set between 8 and 128 characters.  
-  if (passwordLength < 8 || passwordLength > 128) {
-    let passwordLength = alert("Invalid entry. Please choose a password length between 8 and 128 characters.");
+  //Variable defined to determine if input is valid. While function used to ensure that invalid length input does not require the browser to be refreshed before continuing to collect inputs.
+  let isLengthInvalid = true;
+
+  while (isLengthInvalid) {
+    //Prompt for the length of the password.
+    let passwordLength = parseInt(prompt("Please enter desired password length. Minimum of 8 characters required. Please do not exceed 128 characters."));
+  
+    //Test for passwordLength prompt
+    console.log(passwordLength);
+
+    //Validation that length of password is set between 8 and 128 characters.  
+    if (passwordLength < 8 || passwordLength > 128) {
+      let passwordLength = alert("Invalid entry. Please choose a password length between 8 and 128 characters.");
+      continue;
+    } else {
+      isLengthInvalid = false;
+    }
 
 //Confirmation for the types of characters to include in the password.
 
