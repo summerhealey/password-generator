@@ -70,7 +70,7 @@ function generatePassword() {
  
     for (var i = 0; passwordArray.length < passwordLength; i++) {
  
-      if (lowercaseConfirm === true && passwordArray.length <= passwordLength) {
+      if (lowercaseConfirm === true && passwordArray.length < passwordLength) {
         let lowercaseInput = lowercaseCharacters.charAt(Math.floor(Math.random() * lowercaseCharacters.length));
         passwordArray.push(lowercaseInput);
         console.log(passwordArray.length)
