@@ -9,8 +9,6 @@ const uppercaseCharacters = "ABCDEFGHIJKLMNOPQRSTUZWXYZ";
 const numericalCharacters = "0123456789";
 const specialCharacters = "!#$%&'()*+,-./:;<=>?@[]^_`{|}~";
  
- 
- 
 // Begin generatePassword Function. 
  
 function generatePassword() {
