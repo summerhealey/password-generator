@@ -73,7 +73,7 @@ function generatePassword() {
       if (lowercaseConfirm === true && passwordArray.length < passwordLength) {
         let lowercaseInput = lowercaseCharacters.charAt(Math.floor(Math.random() * lowercaseCharacters.length));
         passwordArray.push(lowercaseInput);
-        console.log(passwordArray.length)
+        console.log(passwordArray)
       } else {
         lowercaseConfirm = false;
       }
@@ -103,13 +103,14 @@ function generatePassword() {
       }
     }  
     
+    let passwordCharacters = passwordArray.join ("");
+    return passwordCharacters
     
   }
  
-  let passwordCharacters = passwordArray.join ("");
-  return passwordCharacters
+  
  
-}
+
 //End passwordGeneration Function.
  
 //writePassword function added to translate output "passwordCharacters" to display in text area defined by #password.
