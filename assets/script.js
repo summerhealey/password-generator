@@ -103,13 +103,13 @@ function generatePassword() {
       }
     }  
     
+    let passwordCharacters = passwordArray.join ("");
+    return passwordCharacters
     
   }
  
-  let passwordCharacters = passwordArray.join ("");
-  return passwordCharacters
- 
-}
+}  
+
 //End passwordGeneration Function.
  
 //writePassword function added to translate output "passwordCharacters" to display in text area defined by #password.
@@ -143,4 +143,3 @@ function copyPassword () {
  
   //Add event listner to selected password text
   generateSelect.addEventListener("select", copyPassword);
-
